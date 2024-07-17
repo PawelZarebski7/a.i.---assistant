@@ -11,6 +11,8 @@ import CompanyTable from "@/components/partials/table/company-table";
 import RecentActivity from "@/components/partials/widget/recent-activity";
 import RadarChart from "@/components/partials/widget/chart/radar-chart";
 import HomeBredCurbs from "@/components/partials/HomeBredCurbs";
+import UserTable from "@/app/components/UserTable";
+
 
 const MostSales = dynamic(
   () => import("@/components/partials/widget/most-sales"),
@@ -37,6 +39,16 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-5">
+      <div className="lg:col-span-8 col-span-12">
+          <Card title="A.I. Users" headerslot={<SelectMonth />} noborder>
+            <UserTable />
+          </Card>
+        </div>
+        <div className="lg:col-span-4 col-span-12">
+          <Card title="Recent Activity" headerslot={<SelectMonth />}>
+            <RecentActivity />
+          </Card>
+        </div>
         <div className="lg:col-span-8 col-span-12">
           <Card>
             <div className="legend-ring">
@@ -49,17 +61,8 @@ const Dashboard = () => {
             <RadialsChart />
           </Card>
         </div>
-        <div className="lg:col-span-8 col-span-12">
-          <Card title="All Company" headerslot={<SelectMonth />} noborder>
-            <CompanyTable />
-          </Card>
-        </div>
-        <div className="lg:col-span-4 col-span-12">
-          <Card title="Recent Activity" headerslot={<SelectMonth />}>
-            <RecentActivity />
-          </Card>
-        </div>
-        <div className="lg:col-span-8 col-span-12">
+       
+        {/* <div className="lg:col-span-8 col-span-12">
           <Card
             title="Most Sales"
             headerslot={
@@ -93,43 +96,8 @@ const Dashboard = () => {
           >
             <MostSales filterMap={filterMap} />
           </Card>
-        </div>
-        <div className="lg:col-span-4 col-span-12">
-          <Card title="Overview" headerslot={<SelectMonth />}>
-            <RadarChart />
-            <div className="bg-slate-50 dark:bg-slate-900 rounded p-4 mt-8 flex justify-between flex-wrap">
-              <div className="space-y-1">
-                <h4 className="text-slate-600 dark:text-slate-200 text-xs font-normal">
-                  Invested amount
-                </h4>
-                <div className="text-sm font-medium text-slate-900 dark:text-white">
-                  $8264.35
-                </div>
-                <div className="text-slate-500 dark:text-slate-300 text-xs font-normal">
-                  +0.001.23 (0.2%)
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <h4 className="text-slate-600 dark:text-slate-200 text-xs font-normal">
-                  Invested amount
-                </h4>
-                <div className="text-sm font-medium text-slate-900 dark:text-white">
-                  $8264.35
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <h4 className="text-slate-600 dark:text-slate-200 text-xs font-normal">
-                  Invested amount
-                </h4>
-                <div className="text-sm font-medium text-slate-900 dark:text-white">
-                  $8264.35
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div>
+        </div> */}
+       
       </div>   
     </div>
   );
