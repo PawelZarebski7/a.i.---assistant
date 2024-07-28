@@ -87,7 +87,7 @@ const UserTable = () => {
 
   const COLUMNS = useMemo(() => [
     {
-      Header: "Username",
+      Header: "Nazwa",
       accessor: "username",
     },
     {
@@ -99,32 +99,32 @@ const UserTable = () => {
       accessor: "role",
     },
     {
-      Header: "Created At",
+      Header: "Stworzony",
       accessor: "created_at",
       Cell: ({ value }) => new Date(value).toLocaleString(),
     },
     {
-      Header: "Last Login",
+      Header: "Ostatnie logowanie",
       accessor: "last_login",
       Cell: ({ value }) => value ? new Date(value).toLocaleString() : 'Never',
     },
     {
-      Header: "Active",
+      Header: "Aktywny",
       accessor: "is_active",
-      Cell: ({ value }) => value ? "Yes" : "No",
+      Cell: ({ value }) => value ? "Tak" : "Nie",
     },
-    {
-      Header: "Actions",
-      accessor: "id",
-      Cell: ({ value }) => (
-        <button
-          onClick={() => handleDeleteUser(value)}
-          className="btn btn-danger btn-sm"
-        >
-          <Icon icon="heroicons-outline:trash" className="w-5 h-5" />
-        </button>
-      ),
-    },
+    // {
+    //   Header: "Actions",
+    //   accessor: "id",
+    //   Cell: ({ value }) => (
+    //     <button
+    //       onClick={() => handleDeleteUser(value)}
+    //       className="btn btn-danger btn-sm"
+    //     >
+    //       <Icon icon="heroicons-outline:trash" className="w-5 h-5" />
+    //     </button>
+    //   ),
+    // },
   ], []);
 
   const columns = useMemo(() => COLUMNS, []);

@@ -36,6 +36,8 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log('User in Chat component:', user);
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (message.trim()) {
@@ -49,7 +51,11 @@ const Chat = () => {
       setIsLoading(true);
 
       try {
-        const response = await axios.post('/api/chat', { messages: [...messages, newMessage] });
+        console.log('Sending message with user ID:', user.id);
+        const response = await axios.post('/api/chat', {
+          messages: [...messages, newMessage],
+          userId: user.id
+        });
         console.log('Response from server:', response.data);
         setMessages(prevMessages => [...prevMessages, { sender: 'them', content: response.data.content }]);
       } catch (error) {
@@ -68,6 +74,28 @@ const Chat = () => {
     }
     console.log('Current messages:', messages);
   }, [messages]);
+
+  useEffect(() => {
+    const loadChatHistory = async () => {
+      if (user?.id) {
+        try {
+          console.log('Loading chat history for user ID:', user.id);
+          const response = await axios.get(`/api/chat/history/${user.id}`);
+          if (Array.isArray(response.data.chatHistory)) {
+            setMessages(response.data.chatHistory);
+          } else {
+            console.error('Chat history is not an array:', response.data.chatHistory);
+            setMessages([]);
+          }
+        } catch (error) {
+          console.error('Error loading chat history:', error);
+          setMessages([]);
+        }
+      }
+    };
+
+    loadChatHistory();
+  }, [user?.id]);
 
   return (
     <div className="h-full">
@@ -117,67 +145,71 @@ const Chat = () => {
           className="msgs overflow-y-auto msg-height pt-6 space-y-6"
           ref={chatheight}
         >
-          {messages.map((item, i) => (
-            <div className="block md:px-6 px-4" key={i}>
-              {item.sender === "them" && (
-                <div className="flex space-x-2 items-start group rtl:space-x-reverse">
-                  <div className="flex-none">
-                    <div className="h-8 w-8 rounded-full">
-                      <img
-                        src="/assets/images/users/ai-avatar.jpg"
-                        alt=""
-                        className="block w-full h-full object-cover rounded-full"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 flex space-x-4 rtl:space-x-reverse">
-                    <div>
-                      <div className="text-contrent p-3 bg-slate-100 dark:bg-slate-600 dark:text-slate-300 text-slate-600 text-sm font-normal mb-1 rounded-md flex-1 whitespace-pre-wrap break-all">
-                        {item.content}
+          {Array.isArray(messages) && messages.length > 0 ? (
+            messages.map((item, i) => (
+              <div className="block md:px-6 px-4" key={i}>
+                {item.sender === "them" && (
+                  <div className="flex space-x-2 items-start group rtl:space-x-reverse">
+                    <div className="flex-none">
+                      <div className="h-8 w-8 rounded-full">
+                        <img
+                          src="/assets/images/users/ai-avatar.jpg"
+                          alt=""
+                          className="block w-full h-full object-cover rounded-full"
+                        />
                       </div>
-                      <span className="font-normal text-xs text-slate-400 dark:text-slate-400">
-                        {time()}
-                      </span>
                     </div>
-                  </div>
-                </div>
-              )}
-              {item.sender === "me" && (
-                <div className="flex space-x-2 items-start justify-end group w-full rtl:space-x-reverse">
-                  <div className="no flex space-x-4 rtl:space-x-reverse">
-                    <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                      <Dropdown
-                        classMenuItems=" w-[100px] left-0 top-0  "
-                        items={chatAction}
-                        label={
-                          <div className="h-8 w-8 bg-slate-300 dark:bg-slate-900 dark:text-slate-400 flex flex-col justify-center items-center text-xl rounded-full text-slate-900">
-                            <Icon icon="heroicons-outline:dots-horizontal" />
-                          </div>
-                        }
-                      />
-                    </div>
-                    <div className="whitespace-pre-wrap break-all">
-                      <div className="text-contrent p-3 bg-slate-300 dark:bg-slate-900 dark:text-slate-300 text-slate-800 text-sm font-normal rounded-md flex-1 mb-1">
-                        {item.content}
+                    <div className="flex-1 flex space-x-4 rtl:space-x-reverse">
+                      <div>
+                        <div className="text-contrent p-3 bg-slate-100 dark:bg-slate-600 dark:text-slate-300 text-slate-600 text-sm font-normal mb-1 rounded-md flex-1 whitespace-pre-wrap break-all">
+                          {item.content}
+                        </div>
+                        <span className="font-normal text-xs text-slate-400 dark:text-slate-400">
+                          {time()}
+                        </span>
                       </div>
-                      <span className="font-normal text-xs text-slate-400">
-                        {time()}
-                      </span>
                     </div>
                   </div>
-                  <div className="flex-none">
-                    <div className="h-8 w-8 rounded-full">
-                      <img
-                        src={item.img}
-                        alt=""
-                        className="block w-full h-full object-cover rounded-full"
-                      />
+                )}
+                {item.sender === "me" && (
+                  <div className="flex space-x-2 items-start justify-end group w-full rtl:space-x-reverse">
+                    <div className="no flex space-x-4 rtl:space-x-reverse">
+                      <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                        <Dropdown
+                          classMenuItems=" w-[100px] left-0 top-0  "
+                          items={chatAction}
+                          label={
+                            <div className="h-8 w-8 bg-slate-300 dark:bg-slate-900 dark:text-slate-400 flex flex-col justify-center items-center text-xl rounded-full text-slate-900">
+                              <Icon icon="heroicons-outline:dots-horizontal" />
+                            </div>
+                          }
+                        />
+                      </div>
+                      <div className="whitespace-pre-wrap break-all">
+                        <div className="text-contrent p-3 bg-slate-300 dark:bg-slate-900 dark:text-slate-300 text-slate-800 text-sm font-normal rounded-md flex-1 mb-1">
+                          {item.content}
+                        </div>
+                        <span className="font-normal text-xs text-slate-400">
+                          {time()}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex-none">
+                      <div className="h-8 w-8 rounded-full">
+                        <img
+                          src={item.img}
+                          alt=""
+                          className="block w-full h-full object-cover rounded-full"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            ))
+          ) : (
+            <div className="text-center py-4">No messages yet</div>
+          )}
           {isLoading && (
             <div className="flex justify-center items-center p-4">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>

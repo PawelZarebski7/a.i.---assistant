@@ -40,7 +40,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-12 gap-5">
       <div className="lg:col-span-8 col-span-12">
-          <Card title="A.I. Users" headerslot={<SelectMonth />} noborder>
+          <Card title="A.I. użytkownicy" headerslot={<SelectMonth />} noborder>
             <UserTable />
           </Card>
         </div>
