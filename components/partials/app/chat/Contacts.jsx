@@ -1,11 +1,32 @@
 "use client"
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { openChat } from "./store";
 
 const Contacts = ({ contact }) => {
   const { fullName, avatar, status, lastmessage, unredmessage } = contact;
-
   const dispatch = useDispatch();
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    function updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      const ampm = hours >= 12 ? 'pm' : 'am';
+      
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      
+      setCurrentTime(hours + ':' + minutes + ' ' + ampm);
+    }
+
+    const timer = setInterval(updateTime, 1000);
+    updateTime(); // Call immediately
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div
@@ -23,7 +44,7 @@ const Contacts = ({ contact }) => {
         <div className="flex-none">
           <div className="h-10 w-10 rounded-full relative">
             <span
-              className={`  status ring-1 ring-white inline-block h-[10px] w-[10px] rounded-full absolute -right-0 top-0
+              className={`status ring-1 ring-white inline-block h-[10px] w-[10px] rounded-full absolute -right-0 top-0
                 ${status === "active" ? "bg-success-500" : "bg-secondary-500"}
               `}
             ></span>
@@ -45,17 +66,14 @@ const Contacts = ({ contact }) => {
           </div>
           <div className="flex-none ltr:text-right rtl:text-end">
             <span className="block text-xs text-slate-400 dark:text-slate-400 font-normal">
-              12:20 pm
+              {currentTime}
             </span>
-
-
+            {unredmessage > 0 && (
               <span className="inline-flex flex-col items-center justify-center text-[10px] font-medium w-4 h-4 bg-[#FFC155] text-white rounded-full">
-              2
+                {unredmessage}
               </span>
-
-
+            )}
           </div>
-
         </div>
       </div>
     </div>
