@@ -4,7 +4,7 @@ import { Pool } from 'pg';
 
 console.log('Database configuration:', {
   user: process.env.DB_USER,
-  host: process.env.DB_HOST,
+  host: process.env.POSTGRES_HOST,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
   passwordSet: !!process.env.DB_PASSWORD

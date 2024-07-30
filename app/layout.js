@@ -7,7 +7,7 @@ import "leaflet/dist/leaflet.css";
 import "./scss/app.scss";
 
 export const metadata = {
-  title: 'Dashcode Next Js',
+  title: 'A.I. Assistant',
   description: 'Dashcode is a popular dashboard template.',
 }
 
