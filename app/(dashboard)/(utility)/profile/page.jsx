@@ -32,7 +32,7 @@ const profile = () => {
                   User
                 </div>
                 <div className="text-sm font-light text-slate-600 dark:text-slate-400">
-                  Front End Developer
+                  A.I. Assistant
                 </div>
               </div>
             </div>
