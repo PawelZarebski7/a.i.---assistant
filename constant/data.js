@@ -26,7 +26,7 @@ export const menuItems = [
     isHide: true,
     icon: "heroicons-outline:chat",
     link: "chat",
-  },
+  }
 
   // {
   //   title: "Calender",

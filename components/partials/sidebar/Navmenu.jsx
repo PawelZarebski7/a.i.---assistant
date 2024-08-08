@@ -111,14 +111,14 @@ const Navmenu = ({ menus }) => {
         ))}
         <li className="single-sidebar-menu">
           <a
-            href="https://dashcode-react-doc.codeshaper.tech/"
+            href="https://frodo.poznan.pl/"
             target="_blank"
             className="menu-link"
           >
             <span className="menu-icon">
-              <Icon icon="heroicons:document" />
+              <Icon icon="heroicons:home" />
             </span>
-            <div className="text-box">Documentation</div>
+            <div className="text-box">Strona Frodo</div>
           </a>
         </li>
       </ul>
