@@ -54,11 +54,11 @@ const MyProfile = () => {
               </div>
               <div className="flex-1 text-start">
                 <span className="block text-slate-800 dark:text-slate-300 text-sm font-medium mb-[2px]">
-                  A.I. Assistant
+                  A.I Asystent
                   <span className="status bg-success-500 inline-block h-[10px] w-[10px] rounded-full ml-3"></span>
                 </span>
                 <span className="block text-slate-500 dark:text-slate-300 text-xs font-normal">
-                  Available
+                  Dostępny 24h
                 </span>
               </div>
             </div>

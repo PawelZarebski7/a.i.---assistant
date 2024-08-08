@@ -16,9 +16,9 @@ export const appChatSlice = createSlice({
     contacts: [
       {
         id: 1,
-        fullName: "A.I. Assistant",
+        fullName: "Frodo A.I. Asystent",
         role: "GPT-4 Model",
-        lastmessage: "Hey! there I'm available",
+        lastmessage: "Cześć ! Jak mogę Ci pomóc dzisiaj?",
         lastmessageTime: "2:30 PM",
         unredmessage: Math.floor(Math.random() * 10),
         avatar: "/assets/images/users/user-2.jpg",
