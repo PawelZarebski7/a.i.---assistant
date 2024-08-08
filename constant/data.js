@@ -28,19 +28,19 @@ export const menuItems = [
     link: "chat",
   },
 
-  {
-    title: "Calender",
-    isHide: true,
-    icon: "heroicons-outline:calendar",
-    link: "calender",
-  },
+  // {
+  //   title: "Calender",
+  //   isHide: true,
+  //   icon: "heroicons-outline:calendar",
+  //   link: "calender",
+  // },
 
-  {
-    title: "Todo",
-    isHide: true,
-    icon: "heroicons-outline:clipboard-check",
-    link: "todo",
-  },
+  // {
+  //   title: "Todo",
+  //   isHide: true,
+  //   icon: "heroicons-outline:clipboard-check",
+  //   link: "todo",
+  // },
 ];
 
 export const topMenu = [
