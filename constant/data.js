@@ -1,21 +1,21 @@
 export const menuItems = [
-  {
-    isHeadr: true,
-    title: "menu",
-  },
+  // {
+  //   isHeadr: true,
+  //   title: "menu",
+  // },
 
-  {
-    title: "Dashboard",
-    icon: "heroicons-outline:home",
-    isOpen: true,
-    isHide: true,
-    child: [
-      {
-        childtitle: "Analytics Dashboard",
-        childlink: "analytics",
-      },
-    ],
-  },
+  // {
+  //   title: "Dashboard",
+  //   icon: "heroicons-outline:home",
+  //   isOpen: true,
+  //   isHide: true,
+  //   child: [
+  //     {
+  //       childtitle: "Analytics Dashboard",
+  //       childlink: "analytics",
+  //     },
+  //   ],
+  // },
   {
     isHeadr: true,
     title: "apps",
