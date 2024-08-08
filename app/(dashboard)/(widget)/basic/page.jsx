@@ -245,9 +245,9 @@ const BasicWidget = () => {
             key={i}
           >
             <div className="max-w-[168px]">
-              <div className="widget-title">Unlimited Access</div>
+              <div className="widget-title">Nielimitowany dostęp</div>
               <div className="text-xs font-normal">
-                Upgrade your system to business plan
+                Rozwiń swój biznes z aplikacją MobiPest
               </div>
             </div>
             <div className="mt-6 mb-14">
@@ -280,9 +280,9 @@ const BasicWidget = () => {
               className="mx-auto relative -mt-[40px]"
             />
             <div className="max-w-[160px] mx-auto mt-6">
-              <div className="widget-title">Unlimited Access</div>
+              <div className="widget-title">Nielimitowany dostęp</div>
               <div className="text-xs font-normal">
-                Upgrade your system to business plan
+                Rozwiń swój biznes z aplikacją MobiPest
               </div>
             </div>
             <div className="mt-6">
@@ -305,7 +305,7 @@ const BasicWidget = () => {
               className="mx-auto relative -mt-[73px]"
             />
             <div className="max-w-[160px] mx-auto mt-6">
-              <div className="widget-title">Unlimited Access</div>
+              <div className="widget-title">Nielimitowany dostęp</div>
               <div className="text-xs font-normal">
                 Upgrade your system to business plan
               </div>

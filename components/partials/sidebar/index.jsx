@@ -69,15 +69,18 @@ const Sidebar = () => {
                 className="mx-auto relative -mt-[73px]"
               />
               <div className="max-w-[160px] mx-auto mt-6">
-                <div className="widget-title">Unlimited Access</div>
+                <div className="widget-title">Nielimitowany dostęp</div>
                 <div className="text-xs font-light">
-                  Upgrade your system to business plan
+                  Rozwiń swój biznes z aplikacją MobiPest
                 </div>
               </div>
               <div className="mt-6">
-                <button className="btn bg-white hover:bg-opacity-80 text-slate-900 btn-sm w-full block">
-                  Upgrade
-                </button>
+              <button 
+  className="btn bg-white hover:bg-opacity-80 text-slate-900 btn-sm w-full block"
+  onClick={() => window.open('https://mobipest.eu/', '_blank')}
+>
+  Mobipest
+</button>
               </div>
             </div>
           )}
