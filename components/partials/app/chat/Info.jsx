@@ -4,35 +4,35 @@ import { useSelector } from "react-redux";
 import Icon from "@/components/ui/Icon";
 
 const socials = [
-  {
-    name: "facebook",
-    icon: "bi:facebook",
-    link: "#",
-  },
-  {
-    name: "twitter",
-    link: "#",
-    icon: "bi:twitter",
-  },
-  {
-    name: "instagram",
-    link: "#",
-    icon: "bi:instagram",
-  },
+  // {
+  //   name: "Strona WWW",
+  //   icon: "bi:facebook",
+  //   link: "https://frodo.poznan.pl/",
+  // },
+  // {
+  //   name: "twitter",
+  //   link: "#",
+  //   icon: "bi:twitter",
+  // },
+  // {
+  //   name: "instagram",
+  //   link: "#",
+  //   icon: "bi:instagram",
+  // },
 ];
 
 const Info = () => {
   const { activechat, user } = useSelector((state) => state.chat);
   return (
     <SimpleBar className="h-full p-6">
-      <h4 className="text-xl text-slate-900 font-medium mb-8">About</h4>
-      <div className="h-[100px] w-[100px] rounded-full mx-auto mb-4">
+      <h4 className="text-xl text-slate-900 font-medium mb-8">O Modelu Frodo A.I.</h4>
+      {/* <div className="h-[100px] w-[100px] rounded-full mx-auto mb-4">
         <img
           src={user.avatar}
           alt=""
           className="block w-full h-full object-cover rounded-full"
         />
-      </div>
+      </div> */}
       <div className="text-center">
         <h5 className="text-base text-slate-600 dark:text-slate-300 font-medium mb-1">
           {user.fullName}
@@ -48,23 +48,23 @@ const Info = () => {
               icon="heroicons-outline:location-marker"
               className="text-base"
             />
-            <span>Location</span>
+            <span>Siedziba</span>
           </div>
-          <div className="font-medium">U.S.A</div>
+          <div className="font-medium">Poznań</div>
         </li>
-        <li className="flex justify-between text-sm text-slate-600 dark:text-slate-300 leading-[1]">
+        {/* <li className="flex justify-between text-sm text-slate-600 dark:text-slate-300 leading-[1]">
           <div className="flex space-x-2 items-start rtl:space-x-reverse">
             <Icon icon="heroicons-outline:user" className="text-base" />
             <span>Members since</span>
           </div>
           <div className="font-medium">June 2024</div>
-        </li>
+        </li> */}
         <li className="flex justify-between text-sm text-slate-600 dark:text-slate-300 leading-[1]">
           <div className="flex space-x-2 items-start rtl:space-x-reverse">
             <Icon icon="heroicons-outline:translate" className="text-base" />
-            <span>Language</span>
+            <span>Język</span>
           </div>
-          <div className="font-medium">International</div>
+          <div className="font-medium">Dowolny</div>
         </li>
       </ul>
       <ul className="list-item space-y-3 border-b border-slate-100 dark:border-slate-700 pb-5 -mx-6 px-6 mt-5">

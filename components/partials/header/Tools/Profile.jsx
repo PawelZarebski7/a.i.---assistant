@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 const ProfileLabel = () => {
   return (
     <div className="flex items-center">
-      <div className="flex-1 ltr:mr-[10px] rtl:ml-[10px]">
+      {/* <div className="flex-1 ltr:mr-[10px] rtl:ml-[10px]">
         <div className="lg:h-8 lg:w-8 h-7 w-7 rounded-full">
           <img
             src="/assets/images/all-img/user.png"
@@ -17,7 +17,7 @@ const ProfileLabel = () => {
             className="block w-full h-full object-cover rounded-full"
           />
         </div>
-      </div>
+      </div> */}
       <div className="flex-none text-slate-600 dark:text-white text-sm font-normal items-center lg:flex hidden overflow-hidden text-ellipsis whitespace-nowrap">
         <span className="overflow-hidden text-ellipsis whitespace-nowrap w-[85px] block">
           User
@@ -35,14 +35,14 @@ const Profile = () => {
   const router = useRouter();
 
   const ProfileMenu = [
-    {
-      label: "Profile",
-      icon: "heroicons-outline:user",
+    // {
+    //   label: "Profile",
+    //   icon: "heroicons-outline:user",
 
-      action: () => {
-        router.push("/profile");
-      },
-    },
+    //   action: () => {
+    //     router.push("/profile");
+    //   },
+    // },
     {
       label: "Chat",
       icon: "heroicons-outline:chat",
@@ -50,34 +50,34 @@ const Profile = () => {
         router.push("/chat");
       },
     },
-    {
-      label: "Email",
-      icon: "heroicons-outline:mail",
-      action: () => {
-        router.push("email");
-      },
-    },
-    {
-      label: "Todo",
-      icon: "heroicons-outline:clipboard-check",
-      action: () => {
-        router.push("/todo");
-      },
-    },
-    {
-      label: "Settings",
-      icon: "heroicons-outline:cog",
-      action: () => {
-        router.push("/settings");
-      },
-    },
-    {
-      label: "Price",
-      icon: "heroicons-outline:credit-card",
-      action: () => {
-        router.push("/pricing");
-      },
-    },
+    // {
+    //   label: "Email",
+    //   icon: "heroicons-outline:mail",
+    //   action: () => {
+    //     router.push("email");
+    //   },
+    // },
+    // {
+    //   label: "Todo",
+    //   icon: "heroicons-outline:clipboard-check",
+    //   action: () => {
+    //     router.push("/todo");
+    //   },
+    // },
+    // {
+    //   label: "Settings",
+    //   icon: "heroicons-outline:cog",
+    //   action: () => {
+    //     router.push("/settings");
+    //   },
+    // },
+    // {
+    //   label: "Price",
+    //   icon: "heroicons-outline:credit-card",
+    //   action: () => {
+    //     router.push("/pricing");
+    //   },
+    // },
     {
       label: "Faq",
       icon: "heroicons-outline:information-circle",

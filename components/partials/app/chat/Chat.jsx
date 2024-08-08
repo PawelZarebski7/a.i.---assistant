@@ -208,7 +208,7 @@ const Chat = () => {
               </div>
             ))
           ) : (
-            <div className="text-center py-4">No messages yet</div>
+            <div className="text-center py-4">Rozpocznij rozmowę z FRODO A.I.</div>
           )}
           {isLoading && (
             <div className="flex justify-center items-center p-4">
@@ -234,7 +234,7 @@ const Chat = () => {
             <textarea
               type="text"
               value={message}
-              placeholder="Type your message..."
+              placeholder="Zadaj pytanie..."
               className="focus:ring-0 focus:outline-0 block w-full bg-transparent dark:text-white resize-none"
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={(e) => {
