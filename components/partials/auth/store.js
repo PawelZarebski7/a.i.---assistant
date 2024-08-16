@@ -85,16 +85,16 @@ export const authSlice = createSlice({
       if (typeof window !== "undefined") {
         window?.localStorage.setItem("isAuth", JSON.stringify(state.isAuth));
       }
-      toast.success("User logged in successfully", {
-        position: "top-right",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      // toast.success("User logged in successfully", {
+      //   position: "top-right",
+      //   autoClose: 1500,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      // });
     },
     handleLogout: (state, action) => {
       state.isAuth = action.payload;
@@ -102,9 +102,9 @@ export const authSlice = createSlice({
       if (typeof window !== "undefined") {
         window?.localStorage.removeItem("isAuth");
       }
-      toast.success("User logged out successfully", {
-        position: "top-right",
-      });
+      // toast.success("User logged out successfully", {
+      //   position: "top-right",
+      // });
     },
   },
 });
