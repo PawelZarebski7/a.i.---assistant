@@ -7,7 +7,7 @@ const MenuHidden = () => {
   return (
     <div className=" flex justify-between">
       <div className="text-slate-600 text-base dark:text-slate-300 font-normal">
-        Menu Hidden
+        Menu Ukryte
       </div>
       <Switch
         value={menuHidden}

@@ -7,69 +7,39 @@ import { Tab } from "@headlessui/react";
 
 const faqmenus = [
   {
-    title: "Getting started",
+    title: "Start",
   },
   {
-    title: "Privacy & security",
-  },
-  {
-    title: "Legal",
+    title: "Polityka prywatności i bezpieczeństwo",
   },
 ];
 const items = [
   {
-    title: "How does Dashcode work?",
+    title: "Jak działa AI Asystent?",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "AI Asystent działa, wykorzystując zaawansowane algorytmy sztucznej inteligencji, które przetwarzają naturalny język. Odpowiada na pytania, generuje treści i wykonuje inne zadania w obrębie działalności firmy Frodo.",
   },
   {
-    title: "Where i can learn more about using Dashcode?",
+    title: "Co zrobić jeżeli Asystent nie odpowiada?",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
-  },
-  {
-    title: "Why Dashcode is so important?",
-    content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
-  },
-  {
-    title: "Where can i find Dashcode?",
-    content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
-  },
-  {
-    title: "Why Dashcode is so important?",
-    content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "Rozpoczniej rozmowę od sformułowania: Cześć Frodo! Bywa, że z powodów od nas niezależnych liczba (działanie modułów OpenAI) odpowiedź jest ograniczona. W takim przypadku prosimy o ponowne zapytanie później, lub o kontakt telefoniczny z naszym działem wsparcia.",
   },
 ];
 const items2 = [
   {
-    title: "How does Dashcode work?",
+    title: "Zbieranie danych",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "AI Asystenci działają na podstawie danych, które są dostarczane przez użytkowników. Może to obejmować tekst, obrazy, dane osobowe lub inne informacje, które są przetwarzane w celu udzielenia odpowiedzi lub wykonania określonych zadań. Kluczowe jest zrozumienie, że każda interakcja z AI może wiązać się z przekazywaniem danych, które mogą być analizowane, przechowywane lub wykorzystywane do dalszego doskonalenia modelu AI.",
   },
   {
-    title: "Where i can learn more about using Dashcode?",
+    title: "Ochrona prywatności użytkowników",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
-  },
-];
-const items3 = [
-  {
-    title: "How does Dashcode work?",
-    content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "Ochrona prywatności użytkowników to fundament działania AI Asystentów. Użytkownicy mają prawo wiedzieć, jakie dane są zbierane i jak są przetwarzane. Mają również prawo zażądać usunięcia swoich danych z systemu. Dane użytkowników nie są udostępniane stronom trzecim bez zgody użytkownika, chyba że wymagają tego przepisy prawne.",
   },
   {
-    title: "Where i can learn more about using Dashcode?",
+    title: "Bezpieczeństwo",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
-  },
-  {
-    title: "Where can i find Dashcode?",
-    content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "Bezpieczeństwo danych jest priorytetem dla dostawców AI Asystentów. Dane przesyłane między użytkownikiem a serwerem są szyfrowane, co zabezpiecza je przed przechwyceniem przez osoby trzecie. Dostęp do danych jest ściśle kontrolowany, a tylko upoważnieni pracownicy mogą korzystać z tych danych w celu świadczenia usługi. Silne hasła i dwuskładnikowe uwierzytelnianie (2FA) zabezpieczają konta użytkowników przed nieautoryzowanym dostępem.",
   },
 ];
 
@@ -120,9 +90,6 @@ const FaqPage = () => {
               </Tab.Panel>
               <Tab.Panel>
                 <Accordion items={items2} />
-              </Tab.Panel>
-              <Tab.Panel>
-                <Accordion items={items3} />
               </Tab.Panel>
             </Tab.Panels>
           </div>

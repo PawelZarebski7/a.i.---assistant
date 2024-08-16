@@ -11,11 +11,11 @@ const CWidth = () => {
   return (
     <div>
       <h4 className="text-slate-600 text-base dark:text-slate-300 mb-2 font-normal">
-        Content Width
+        Szerokość treści
       </h4>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
         <Radio
-          label="Full Width"
+          label="Pełna szerkość"
           name="cwidth"
           value="full"
           checked={contentWidth === "full"}
@@ -23,7 +23,7 @@ const CWidth = () => {
           onChange={handleChange}
         />
         <Radio
-          label="Boxed"
+          label="Obramowany"
           name="cwidth"
           value="boxed"
           className="h-4 w-4"

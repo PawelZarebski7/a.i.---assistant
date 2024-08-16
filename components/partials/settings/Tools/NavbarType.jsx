@@ -9,19 +9,19 @@ const NavType = () => {
   };
   const navTypes = [
     {
-      label: "Sticky",
+      label: "Przyklejony",
       value: "sticky",
     },
     {
-      label: "Static",
+      label: "Statyczny",
       value: "static",
     },
     {
-      label: "Floating",
+      label: "Pływający",
       value: "floating",
     },
     {
-      label: "Hidden",
+      label: "Ukryty",
       value: "hidden",
     },
   ];
@@ -29,7 +29,7 @@ const NavType = () => {
   return (
     <div>
       <h4 className="text-slate-600 text-base dark:text-slate-300 mb-2 font-normal">
-        Navbar Type
+      Typ paska nawigacyjnego
       </h4>
       <div className="grid md:grid-cols-4 grid-cols-1 gap-3">
         {navTypes?.map((item, index) => (

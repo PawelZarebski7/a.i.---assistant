@@ -7,7 +7,7 @@ const Semidark = () => {
   return (
     <div className=" flex justify-between">
       <div className="text-slate-600 text-base dark:text-slate-300 font-normal">
-        Semi Dark
+        Półciemny
       </div>
       <Switch
         value={isSemiDark}

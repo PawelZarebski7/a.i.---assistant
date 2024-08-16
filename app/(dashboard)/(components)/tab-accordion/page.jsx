@@ -24,9 +24,9 @@ const buttons = [
 ];
 const items = [
   {
-    title: "How does Dashcode work?",
+    title: "Jak działa A.I. Asystant",
     content:
-      "Jornalists call this critical, introductory section the  and when bridge properly executed, it's the that carries your reader from anheadine try at attention-grabbing to the body of your blog post.",
+      "AI Asystent działa, wykorzystując zaawansowane algorytmy sztucznej inteligencji, które przetwarzają naturalny język. Odpowiada na pytania, generuje treści, analizuje dane i wykonuje inne zadania na podstawie informacji dostarczanych przez użytkownika. Asystent uczy się na podstawie interakcji, co pozwala mu na coraz lepsze dostosowanie odpowiedzi do potrzeb użytkownika",
   },
   {
     title: "Where i can learn more about using Dashcode?",

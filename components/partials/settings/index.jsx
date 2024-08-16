@@ -36,7 +36,7 @@ const Setings = () => {
             className="text-slate-50 text-lg animate-spin"
           />
           <span className="hidden md:inline-block ltr:ml-2 rtl:mr-2">
-            Settings
+            Ustawienia
           </span>
         </span>
       )}
@@ -57,10 +57,10 @@ const Setings = () => {
           <header className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 -mx-6 px-6 py-[15px] mb-6">
             <div>
               <span className="block text-xl text-slate-900 font-medium dark:text-[#eee]">
-                Theme customizer
+                  Personalizator motywu
               </span>
               <span className="block text-sm font-light text-[#68768A] dark:text-[#eee]">
-                Customize & Preview in Real Time
+                  Dostosuj i zobacz podgląd na żywo
               </span>
             </div>
             <div

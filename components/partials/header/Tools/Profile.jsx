@@ -86,7 +86,7 @@ const Profile = () => {
       },
     },
     {
-      label: "Logout",
+      label: "Wyloguj się",
       icon: "heroicons-outline:login",
       action: () => {
         dispatch(handleLogout(false));

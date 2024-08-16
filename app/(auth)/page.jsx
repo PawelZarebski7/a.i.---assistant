@@ -26,9 +26,9 @@ const Login = () => {
                 />
               </Link> */}
               <h4>
-                A.I. Asystent{" "}
+                 Frodo A.I. Asystent{" "}
                 <span className="text-slate-800 dark:text-slate-400 font-bold">
-                  performance
+                  
                 </span>
               </h4>
             </div>

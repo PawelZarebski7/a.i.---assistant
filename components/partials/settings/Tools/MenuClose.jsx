@@ -7,7 +7,7 @@ const MenuClose = () => {
   return (
     <div className=" flex justify-between">
       <div className="text-slate-600 text-base dark:text-slate-300 font-normal">
-        Menu Collapsed
+          Zwinięte menu
       </div>
       <Switch
         value={collapsed}
