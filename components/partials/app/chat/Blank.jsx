@@ -9,10 +9,9 @@ const Blank = () => {
   return (
     <div className="h-full flex flex-col items-center justify-center xl:space-y-2 space-y-6">
       <img src="/assets/images/svg/blank.svg" alt="" />
-      <h4 className="text-2xl text-slate-600 dark:text-slate-300 font-medium">
+      <h4 className="text-2xl text-slate-600 dark:text-slate-300 font-medium text-center sm:text-left">
         Chcesz porozmawiać z Frodo A.I.
       </h4>
-
       <p className="text-sm text-slate-500 lg:pt-0 pt-4">
         {width > breakpoints.lg ? (
           <span>
@@ -23,7 +22,7 @@ const Blank = () => {
             className="btn btn-dark cursor-pointer"
             onClick={() => dispatch(toggleMobileChatSidebar(true))}
           >
-            Start Conversation
+            Rozpocznij rozmowę
           </span>
         )}
       </p>

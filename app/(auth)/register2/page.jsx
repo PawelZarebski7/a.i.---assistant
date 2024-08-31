@@ -18,7 +18,7 @@ const Register2 = () => {
           <div className="right-column relative">
             <div className="inner-content h-full flex flex-col bg-white dark:bg-slate-800">
               <div className="auth-box h-full flex flex-col justify-center">
-                <div className="mobile-logo text-center mb-6 lg:hidden block">
+                {/* <div className="mobile-logo text-center mb-6 lg:hidden block">
                   <Link href="/">
                     <img
                       src={
@@ -30,7 +30,7 @@ const Register2 = () => {
                       className="mx-auto"
                     />
                   </Link>
-                </div>
+                </div> */}
                 <div className="text-center 2xl:mb-10 mb-5">
                   <h4 className="font-medium">Sign up</h4>
                   <div className="text-slate-500 dark:text-slate-400 text-base">

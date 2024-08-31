@@ -26,7 +26,7 @@ const Login3 = () => {
           </div>
           <div className="lg:w-1/2 w-full flex flex-col items-center justify-center">
             <div className="auth-box-3">
-              <div className="mobile-logo text-center mb-6 lg:hidden block">
+              {/* <div className="mobile-logo text-center mb-6 lg:hidden block">
                 <Link href="/">
                   <img
                     src={
@@ -38,7 +38,7 @@ const Login3 = () => {
                     className="mx-auto"
                   />
                 </Link>
-              </div>
+              </div> */}
               <div className="text-center 2xl:mb-10 mb-5">
                 <h4 className="font-medium">Sign In</h4>
                 <div className="text-slate-500 dark:text-slate-400 text-base">

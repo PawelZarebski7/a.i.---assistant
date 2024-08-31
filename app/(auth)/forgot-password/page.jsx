@@ -42,7 +42,7 @@ const ForgotPassPage = () => {
         <div className="right-column relative">
           <div className="inner-content h-full flex flex-col bg-white dark:bg-slate-800">
             <div className="auth-box2 flex flex-col justify-center h-full">
-              <div className="mobile-logo text-center mb-6 lg:hidden block">
+              {/* <div className="mobile-logo text-center mb-6 lg:hidden block">
                 <Link href="/">
                   <img
                     src={
@@ -54,7 +54,7 @@ const ForgotPassPage = () => {
                     className="mx-auto"
                   />
                 </Link>
-              </div>
+              </div> */}
               <div className="text-center 2xl:mb-10 mb-5">
                 <h4 className="font-medium mb-4">Forgot Your Password?</h4>
                 <div className="text-slate-500 dark:text-slate-400 text-base">

@@ -45,7 +45,7 @@ const MobileMenu = ({ className = "custom-class" }) => {
             </div>
             <div>
               <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
-                DashCode
+                Frodo A.I.
               </h1>
             </div>
           </div>
@@ -76,15 +76,17 @@ const MobileMenu = ({ className = "custom-class" }) => {
             className="mx-auto relative -mt-[73px]"
           />
           <div className="max-w-[160px] mx-auto mt-6">
-            <div className="widget-title">Unlimited Access</div>
+            <div className="widget-title">Nielimitowany dostęp</div>
             <div className="text-xs font-light">
-              Upgrade your system to business plan
+               Rozwiń swój biznes z aplikacją MobiPest
             </div>
           </div>
           <div className="mt-6">
+          <a href="https://mobipest.eu/" target="_blank" rel="noopener noreferrer" className="w-full block">
             <button className="btn bg-white hover:bg-opacity-80 text-slate-900 btn-sm w-full block">
-              Upgrade
+              Mobipest
             </button>
+          </a>
           </div>
         </div>
       </SimpleBar>
