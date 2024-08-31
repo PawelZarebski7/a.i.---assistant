@@ -10,10 +10,11 @@ const Loading = () => {
         <img
           src={
             isDark
-              ? "/assets/images/logo/logo-white.svg"
-              : "/assets/images/logo/logo.svg"
+              ? "/assets/images/logo/logo_white-1.webp"
+              : "/assets/images/logo/logo_white-1.webp"
           }
           alt="Logo"
+          style={{width: "50%"}}
         />
       </div>
 

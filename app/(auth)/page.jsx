@@ -26,19 +26,19 @@ const Login = () => {
                 />
               </Link> */}
               <h4>
-                 Frodo A.I. Asystent{" "}
+                {" "}
                 <span className="text-slate-800 dark:text-slate-400 font-bold">
                   
                 </span>
               </h4>
             </div>
-            <div className="absolute left-0 2xl:bottom-[-160px] bottom-[-130px] h-full w-full z-[-1]">
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 mx-12 z-[-1]">
               <img
-                src="/assets/images/auth/ils1.svg"
-                alt=""
-                className="h-full w-full object-contain"
+                  src="/assets/images/logo/logo_white-1.webp"
+                  alt=""
+                  className="w-full object-contain"
               />
-            </div>
+</div>
           </div>
           <div className="right-column relative">
             <div className="inner-content h-full flex flex-col bg-white dark:bg-slate-800">

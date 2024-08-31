@@ -71,7 +71,7 @@ const Navmenu = ({ menus }) => {
             )}
             {/* only for menulabel */}
             {item.isHeadr && !item.child && (
-              <div className="menulabel">Aplikacje</div>
+              <div className="menulabel">{item.title}</div>
             )}
             {/*    !!sub menu parent   */}
             {item.child && (

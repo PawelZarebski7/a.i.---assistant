@@ -128,7 +128,7 @@ const Chat = () => {
             </div>
           </div>
           <div className="flex-none flex md:space-x-3 space-x-1 items-center rtl:space-x-reverse">
-            <div className="msg-action-btn">
+            {/* <div className="msg-action-btn">
               <Icon icon="heroicons-outline:phone" />
             </div>
             <div className="msg-action-btn">
@@ -136,7 +136,7 @@ const Chat = () => {
             </div>
             <div onClick={() => dispatch(infoToggle(!openinfo))} className="msg-action-btn">
               <Icon icon="heroicons-outline:dots-horizontal" />
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
